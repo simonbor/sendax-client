@@ -2,24 +2,24 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <div class="showcase-left">
-              <img src="img/image1.jpg">
+            <div class="showcase-left" [ngsReveal]="{duration: 2000,  origin:'top', distance:'300px'}">
+              <img src="img\500_F_79120799_CGzZH1wcia1aRhAJQ5Er6fe4GBlZGPNI.jpg">
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
-            <div class="showcase-right">
-              <h1>Hands-free help from the Google Assistant</h1>
-              <p>Google Home voice-activated speaker.consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            <div class="showcase-right" [ngsReveal]="{ duration: 2000, origin:'right', distance:'300px' }">
+              <h1>Sending scheduled messages is simple!</h1>
+              <p>Et commodo voluptate Lorem elit amet laboris reprehenderit anim sint nostrud reprehenderit irure. Exercitation ex qui eiusmod voluptate enim pariatur velit laboris velit non. Ut officia elit commodo esse enim proident voluptate voluptate Lorem</p>
             </div>
             <br>
-            <a class="btn btn-default btn-lg showcase-btn">Read More</a>
+            <a class="btn btn-default btn-lg showcase-btn" [ngsReveal]="{ duration: 2000, delay: 2000, origin:'bottom' }">Read More</a>
           </div>
         </div>
       </div>
     </section>
 
     <section id="testimonial">
-      <div class="container">
+      <div class="container" [ngsReveal]="{ duration: 2000, origin:'bottom' }">
         <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"</p>
         <p class="customer">- John Doe</p>
       </div>
@@ -29,12 +29,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <div class="info-left">
-              <img src="img/image2.png">
+            <div class="info-left" [ngsReveal]="{ duration: 2000, origin:'left',         distance:'300px', viewFactor: 0.2 }">
+              <img src="img/500_F_79119586_3ri6sFQXOBDrOsDt3OUrOiJBORaHV3XP.jpg">
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
-            <div class="info-right">
+            <div class="info-right" [ngsReveal]="{ duration: 2000, origin:'right', distance:'300px', viewFactor: 0.2 }">
               <h2>Get To Know Google Home</h2>
               <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
               <br>
@@ -49,13 +49,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <div class="info-left">
+            <div class="info-left" [ngsReveal]="{ duration: 2000, origin:'left', distance:'300px', viewFactor: 0.2 }">
               <h2>Info Block One</h2>
               <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
-            <div class="info-right">
+            <div class="info-right" [ngsReveal]="{ duration: 2000, origin:'right', distance:'300px', viewFactor: 0.2 }">
               <h2>Info Block Two</h2>
               <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
