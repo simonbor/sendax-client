@@ -1,8 +1,36 @@
-<section>
-  <div class="container">
-    <p>
-      orders works!
-    </p>
-  </div>
-</section>
-
+    <section id="orders">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="info-left" [ngsReveal]="{ duration: 2000, origin:'left', distance:'300px', viewFactor: 0.2 }">
+              <h2>Info Block One</h2>
+              <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-5">
+            <form (submit)='form.valid && submit()' #form='ngForm' class="info-right" [ngsReveal]="{ duration: 2000, origin:'right', distance:'300px', viewFactor: 0.2 }">
+              <div class="form-group" [class.has-error]="token.invalid && (token.touched || form.submitted)">
+                <input #token="ngModel" [(ngModel)]='model.token' required class="form-control" type="text" name="token" placeholder="Token">
+              </div>
+              <div class="form-group" [class.has-error]="from.invalid && (from.touched || form.submitted)">
+                <input #from='ngModel' [(ngModel)]='model.from' required class="form-control" type="email" name="from" placeholder="From">
+              </div>
+              <div class="form-group" [class.has-error]="to.invalid && (to.touched || form.submitted)">
+                <input #to='ngModel' [(ngModel)]='model.to' class="form-control" required type="text" name="to" placeholder="To">
+              </div>
+              <div class="form-group" [class.has-error]="delay.invalid && (delay.touched || form.submitted)">
+                <input #delay='ngModel' [(ngModel)]='model.delay' class="form-control" required type="text" name="delay" placeholder="Delay">
+              </div>
+              <div class="form-group" [class.has-error]="repeat.invalid && (repeat.touched || form.submitted)">
+                <input #repeat='ngModel' [(ngModel)]='model.repeat' class="form-control" required type="text" name="repeat" placeholder="Repeat">
+              </div>
+              <div class="form-group">
+                <input [(ngModel)]='model.subject' class="form-control" type="text" name="subject" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea [(ngModel)]='model.text' class="form-control" name="text" placeholder="Enter Message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+       <div class="col-md-7 col-sm-7">
