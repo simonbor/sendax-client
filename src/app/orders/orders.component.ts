@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../models/order.model';
+import { FormPosterService } from '../form-poster.service'
+import { NgForm } from '@angular/forms'
+import { environment } from '../../environments/environment'
 
 @Component({
   selector: 'sendax-orders',
@@ -9,16 +12,15 @@ import { Order } from '../models/order.model';
 
 export class OrdersComponent implements OnInit {
 
+  constructor(private formPosterService: FormPosterService) { }
+  ngOnInit() { }
+
   model = new Order();
+  patternEmail = environment.patternEmail;
+  
 
-  // constructor() { }
-
-  ngOnInit() {
-  }
-
-  submit(form){
-    //form.markAsTouched()
-    console.log('submited');
+  submitForm(form: NgForm){
+    this.formPosterService.postOrderForm(this.model);
   }
 
 }

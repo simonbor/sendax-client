@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormPosterService } from './form-poster.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ContactComponent } from './contact/contact.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FormPosterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
