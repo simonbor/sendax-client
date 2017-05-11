@@ -6,5 +6,7 @@
 export const environment = {
   production: false,
   
-  patternEmail: "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+  patternEmail: "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
+  sendaxServer: "http://localhost:3000",
+  serverUrl: "http://localhost:3000",
 };

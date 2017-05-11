@@ -21,6 +21,7 @@ export class OrdersComponent implements OnInit {
 
   submitForm(form: NgForm){
     this.formPosterService.postOrderForm(this.model);
+    form.resetForm();
   }
 
 }
