@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormPosterService } from './form-poster.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     NgsRevealModule.forRoot(),

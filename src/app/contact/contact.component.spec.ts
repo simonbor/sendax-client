@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
+import {NgsRevealModule} from 'ng2-scrollreveal';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -8,6 +9,7 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports:[NgsRevealModule.forRoot()],
       declarations: [ ContactComponent ]
     })
     .compileComponents();
