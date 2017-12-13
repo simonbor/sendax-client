@@ -15,13 +15,19 @@ export class OrdersComponent implements OnInit {
   constructor(private formPosterService: FormPosterService) { }
   ngOnInit() { }
 
+  errorMessage: String;
   model = new Order();
-  patternEmail = environment.patternEmail;
-  
+  patternEmail = environment.patternEmail;  
 
-  submitForm(form: NgForm){
-    this.formPosterService.postOrderForm(this.model);
-    form.resetForm();
+  submitForm(form: NgForm) : void {
+    this.formPosterService.postOrderForm(this.model)
+    .then(res => {
+      console.log(res);
+      form.resetForm();
+    },
+    error => {
+      this.errorMessage = <any>error;
+      console.log(this.errorMessage);
+    });
   }
-
 }

@@ -9,22 +9,15 @@ export class FormPosterService {
 
   constructor(private http: Http) { }
   
-  public postOrderForm(order: Order){
+  public postOrderForm(order: Order) {
     console.log('order: ${order}');
 
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers });
 
-    this.http.post(environment.serverUrl + '/mail', order, options)
+    return this.http.post(environment.serverUrl + '/mail', order, options)
       .toPromise()
-      .then(res=>res.json())
-      .then(order => console.log(order))
-      .catch(this.handleError);
+      .then(res => res.json())
+      .catch(error => Promise.reject(error.message || error));
   }
-
-  private handleError(error: any){
-    console.error('eRROR hAS oCURRED!', error);
-    return Promise.reject(error.message || error);
-  };
-
 }
